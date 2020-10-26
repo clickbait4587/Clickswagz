@@ -12,6 +12,6 @@ signinForm.addEventListener("submit", (e) => {
   auth.signInWithEmailAndPassword(email, password).then((cred) => {
     signinForm.reset();
     window.location.href =
-      "https://clickbait-4587.github.io/ShoppingCart/logged";
+      "https://clickbait-4587.github.io/ShoppingCart/store";
   });
 });
