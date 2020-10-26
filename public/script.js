@@ -6,7 +6,8 @@ let productsDOM = document.querySelector("div.products");
 let cartDOM = document.querySelector(".cart-items");
 let cart = [];
 let buttonsDOM = [];
-
+let j = { 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6 };
+let user = "";
 class Product {
   async getProducts() {
     let res = await fetch("https://fakestoreapi.com/products");
@@ -20,7 +21,7 @@ class UI {
     products.forEach((item) => {
       rendered += `<div id=${item.id} class="product z-depth- col s12 l3">
                           <img src=${item.image} class="product-img" alt="product">
-                          <button data-id=${item.id} class="btn btn-small add-to-cart-btn z-depth-0 orange lighten-3">Add to Cart</button>
+                          <button data-id=${item.id} class="btn logged btn-small add-to-cart-btn z-depth-0 orange lighten-3">Add to Cart</button>
                   <p class="desc">${item.title}</p>
                   <span><p class="price">$${item.price}</span>
                   </div>`;
@@ -154,11 +155,36 @@ class Storage {
   }
 }
 
+// Logging out
+$(".lo-btn").click(function (e) {
+  e.preventDefault();
+  auth.signOut();
+});
+
 $(document).ready(() => {
+  async function checkUser() {
+    auth.onAuthStateChanged((usr) => {
+      if (user) {
+        $(".n-logged").hide();
+        $(".logged").show();
+        user = usr;
+
+        console.log(user.email);
+      } else {
+        $(".add-to-cart-btn").click(() => {
+          alert("add");
+        });
+        $(".n-logged").show();
+        $(".logged").hide();
+        alert("no user");
+      }
+    });
+  }
+
   $(".sidenav").sidenav();
   let product = new Product();
   let ui = new UI();
-
+  checkUser();
   ui.setupAPP();
   product
     .getProducts()

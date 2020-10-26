@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <title>FoodiGoo Sign Up</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <form action="./index.html" class="su-form">
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password"
+                        placeholder="Password">
+                </div>
+                <div class="center input-field">
+                    <button type="submit" class="btn z-depth-0 grey-text su
+                        btn-small grey lighten-2" value="">Sign up</button>
+                </div>
+            </form>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script
+            src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+        <script>
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+apiKey: "AIzaSyBX4tfQZNUHnRKopID4RrQ-akdzysggV90",
+authDomain: "sketchi-4587.firebaseapp.com",
+databaseURL: "https://sketchi-4587.firebaseio.com",
+projectId: "sketchi-4587",
+storageBucket: "sketchi-4587.appspot.com",
+messagingSenderId: "728507359355",
+appId: "1:728507359355:web:a81ee7a4e76fe2436f02de",
+measurementId: "G-ZNR91NXL8W"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth()
+const store = firebase.firestore();
+</script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+    $()
+</script>
+
+        <script src="signup.js"></script>
+    </body>
+</html>

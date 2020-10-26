@@ -4,22 +4,37 @@ body{
    
     font-family: Verdana, Helvetica
 }
-body.not-loaded{
-    font-family: Verdana, Helvetica;
-    text-align: center;
-background: bisque;
-}
 
-body.not-loaded h1{
-    position:relative;
-    top: 50%
-}
 h1 {
   font-size: 2.4rem;
   font-weight: bold;
   letter-spacing: 10px;
 }
-/*
+.user-btns{
+ 
+    position: relative;
+   margin-top: 10px;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .su-btn{
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px
+  }
+  .so-btn{
+    float: right;
+    margin-right: 10px
+  }
+  .si-btn{
+    float: right;
+  }
+.n-logged, .logged{
+    display: none;
+}
+
 .add-to-cart-btn{
    transform:rotate(20deg);
    position: relative;
@@ -45,7 +60,7 @@ h1 {
     bottom: 5px;
     color: red;
     transform:rotate(0deg);
-}*/
+}
 /*-----Navbar-----*/
 
 nav{

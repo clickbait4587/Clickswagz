@@ -21,6 +21,19 @@
         <!--END CUSTOM CSS-->
     </head>
     <body>
+
+        <div class="user-btns">
+            <a href="./singup.html" class="btn su-btn btn-small z-depth-0 grey
+                lighten-3 grey-text
+                text-darken-2 n-logged">Signup</a>
+            <a href="./login.html" class="btn si-btn btn-small z-depth-0 grey
+                lighten-3 grey-text
+                text-darken-2 n-logged">Login</a>
+            <a class="btn logged lo-btn so-btn btn-small z-depth-0 grey
+                lighten-3
+                grey-text
+                text-darken-2">Logout</a>
+        </div>
         <div class="navbar-fixed">
             <nav class="grey ligthen-4 navbar z-depth-0">
                 <div class="container nav-wrapper">
@@ -29,7 +42,7 @@
                         Bait</a>
                     <a href="#account">
                         <span><button class="account btn-small btn-floating
-                                nav-item right z-depth-0 grey lighten-1">TK</button></span></a>
+                                nav-item right z-depth-0 grey lighten-1 logged">TK</button></span></a>
                     <a href="#sidenav" class="sidenav-trigger"><i
                             class="fal fa-bars"></i></a>
                     <ul class='right hide-on-med-and-down'>
@@ -37,7 +50,7 @@
                         <li><a href="#" class="text-darken-2">Contact</a></li>
                         <li class="cart-trigger"><a href="#cart"
                                 class="show-on-large sidenav-trigger
-                                text-darken-2">Cart</a></li>
+                                text-darken-2 logged">Cart</a></li>
                     </ul>
 
                 </div>
@@ -52,7 +65,7 @@
                 <li class="cart-trigger"><a href="#cart" id="sidenav-text"
                         class="show-on-large
                         sidenav-trigger
-                        grey lighten-3">Cart</a></li>
+                        grey lighten-3 logged">Cart</a></li>
             </ul>
         </div>
         <div id="cart" class="sidenav">
@@ -75,6 +88,37 @@
         <div class="container z-depth- row products">
 
         </div>
+
+
+        <!--FIREBASE-->
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script
+            src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+        <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBX4tfQZNUHnRKopID4RrQ-akdzysggV90",
+    authDomain: "sketchi-4587.firebaseapp.com",
+    databaseURL: "https://sketchi-4587.firebaseio.com",
+    projectId: "sketchi-4587",
+    storageBucket: "sketchi-4587.appspot.com",
+    messagingSenderId: "728507359355",
+    appId: "1:728507359355:web:a81ee7a4e76fe2436f02de",
+    measurementId: "G-ZNR91NXL8W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ const auth = firebase.auth()
+ const store = firebase.firestore();
+</script>
+        <!--ENS FIREBASE-->
         <!--jQuery-->
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
