@@ -11,6 +11,7 @@ signinForm.addEventListener("submit", (e) => {
   const email = signinForm["email"].value;
   auth.signInWithEmailAndPassword(email, password).then((cred) => {
     signinForm.reset();
-    window.location.href = "https://clickbait-4587.github.io/ShoppingCart";
+    window.location.href =
+      "https://clickbait-4587.github.io/ShoppingCart/logged";
   });
 });
