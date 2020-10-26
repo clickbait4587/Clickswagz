@@ -5,7 +5,7 @@ $(document).ready(() => {
     const password = signupForm["password"].value;
     const email = signupForm["email"].value;
     auth.createUserWithEmailAndPassword(email, password).then((resp) => {
-      window.location.href = "/";
+      window.location.href = "https://clickbait-4587.github.io/ShoppingCart";
       console.log(resp);
       signupForm.reset();
     });
