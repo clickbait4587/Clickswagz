@@ -175,6 +175,11 @@ $(document).ready(() => {
       }
     });
   }
+  
+  $(".lo-btn").click(()=>{
+  window.location.href =
+      "https://clickbait-4587.github.io/ShoppingCart/";
+  })
 
   $(".sidenav").sidenav();
   let product = new Product();
