@@ -15,7 +15,7 @@ $(document).ready(() => {
       .createUserWithEmailAndPassword(email, password)
       .then((resp) => {
         console.log(resp);
-        window.location.href = "/docs/";
+        window.location.href = "/";
         signupForm.reset();
       })
       .catch((err) => {
