@@ -15,7 +15,7 @@ $(document).ready(() => {
       .createUserWithEmailAndPassword(email, password)
       .then((resp) => {
         console.log(resp);
-        window.location.href = "/ShopingCart/";
+        window.location.href = "/ShoppingCart/";
         signupForm.reset();
       })
       .catch((err) => {
