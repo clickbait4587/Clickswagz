@@ -63,8 +63,8 @@ class Product {
   async getProducts() {
     let res = await fetch("https://fakestoreapi.com/products");
     let data = await res.json();
-    data = data.slice(0, 20);
-    return data;
+    data = data.slice(0, 0);
+    return data.filter(item=> item.catagory == "men clothing");
   }
 }
 class UI {
@@ -275,7 +275,7 @@ $(document).ready(() => {
   $(".lo-btn").click(function (e) {
     e.preventDefault();
     auth.signOut();
-    window.location.href = "/docs/";
+    window.location.href = "/";
   });
 
   $(".modal").modal({ inDuration: 1000, outDuration: 1000 });
