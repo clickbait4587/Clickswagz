@@ -1,9 +1,3 @@
-//Get data
-
-// Signing up a user
-
-//Logging out
-
 const signinForm = document.querySelector(".si-form");
 signinForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -11,7 +5,6 @@ signinForm.addEventListener("submit", (e) => {
   const email = signinForm["email"].value;
   auth.signInWithEmailAndPassword(email, password).then((cred) => {
     signinForm.reset();
-    window.location.href =
-      "https://clickbait-4587.github.io/ShoppingCart/store";
+    window.location.href = "/docs/";
   });
 });
