@@ -237,7 +237,7 @@ $(document).ready(() => {
   $(".lo-btn").click(function (e) {
     e.preventDefault();
     auth.signOut();
-    window.location.href = "/ShopingCart/";
+    window.location.href = "/ShoppingCart/";
   });
 
   $(".modal").modal({ inDuration: 1000, outDuration: 1000 });
