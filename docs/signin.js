@@ -5,6 +5,6 @@ signinForm.addEventListener("submit", (e) => {
   const email = signinForm["email"].value;
   auth.signInWithEmailAndPassword(email, password).then((cred) => {
     signinForm.reset();
-    window.location.href = "/ShopingCart/";
+    window.location.href = "/ShoppingCart/";
   });
 });
