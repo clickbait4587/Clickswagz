@@ -1,1 +1,1 @@
-# Clicksqags
+# Clickswags
