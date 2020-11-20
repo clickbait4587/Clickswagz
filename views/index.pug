@@ -1,0 +1,50 @@
+extends layout
+
+block content
+
+  include ./header
+  .main
+    .parallax-container(style="position: relative; top: 150px")
+      .parallax
+        img(style='width: 5vw;' src='/images/waseem-khan-bXa97wRPMzM-unsplash.jpg')
+      .paratop.center
+        a.btn.transparent(href='#products') Shop Now
+    section.row(style="position: relative; top: 150px")
+      .col.l3.s6
+        .card.grey.darken-4
+          .card-content.white-text
+            span.card-title
+            p
+              | Shop with us now! We&apos;ve got the best brands world-wide. Top-notch quality...and most of all, We got You!
+            p Check us out!
+      .col.l7.products-cont.s10.offset-l1.offset-s1.white.z-depth-3(style="border: 9px solid grey"
+      )
+        #products.products.row.scrollspy
+
+
+    section
+      .parallax-container(style='height:500px; position: relative; top: 120px')
+        .parallax
+          img(style='width: 100%;' src='/images/najla-cam-pJa95YvT9F0-unsplash.jpg')
+    section.contact-us-sect
+      .row
+        .col.offset-s4.offset-l4.s7.l5
+          h1.white-text.center Contact us
+          form(action='/query' method='POST' style='margin-top: 10%;')
+            .input-group
+              label(for='name') Name:
+              input#name.container(type='text' name='name' placeholder='Enter your name')
+            .input-group
+              label(for='email') Email Address:
+              input#email(type='email' name='email' placeholder='Enter your Email Address')
+            .input-group
+              label(for='message') Message:
+              textarea#message(name='message' placeholder='Enter your query')
+            .input-group(style='margin-top: 20px')
+              button.btn.transparent(style='border: 1px solid; width: 100%;') Submit
+
+    include ./footer
+  script.
+
+
+

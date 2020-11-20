@@ -1,0 +1,23 @@
+extends ./layout
+
+block content
+    .form-page
+
+        .user-form.container
+            form.container(method="post" action="login")
+                h4.mb-5 Login to your Clickswags Account
+                .input-group
+                    label(for='username') Usename
+                    input#username.form-control(type='text' name="username" value="squash")
+                .input-group
+                    label(for='email') Email address
+                    input#email.form-control(type='email' name="email" aria-describedby='emailHelp' value="squash@gmail.com")
+                    small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+                .input-group
+                    label(for='password') Password
+                    input#password.form-control(type='password' name="password" value="baseline")
+
+                button.z-depth-0.btn.btn-small.transparent.center(type='submit' style="margin-bottom: 40px; width:100%; border: 1px solid darkgrey; font-weight: bold; font-family: 'Courier New'; letter-spacing: 5px ") login
+                p.center Don't got an account?
+                .container.center(style="margin-bottom: 40px")
+                    a.transparent.center(href="signup" style="margin-bottom: 40px; width:100%; letter-spacing: 5px ") Signup

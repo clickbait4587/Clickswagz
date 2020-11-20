@@ -1,0 +1,69 @@
+extends ./layout
+block content
+    header
+
+        nav.transparent.z-depth-0(style='border-top: none;')
+            .container.z-depth-0.bottom-nav.nav-wrapper.transparent
+                a.center.brand-logo(href='/') ClickSwags
+                ul.bottom.right
+
+                    li
+                        a.white-text(href='/') Home
+
+                    li
+                        a.white-text(href='#about') About
+                    li.hide-on-med-and-down
+                        a.white-text(href='#') Men
+                    li.hide-on-med-and-down
+                        a.white-text(href='#') Women
+                    li.hide-on-med-and-down
+                        a.white-text(href='#') Accessories
+                    li.hide-on-med-and-down
+                        a.white-text.hide-on-med-and-down(href='#') #Trends
+                    li.show-on-large.hide-on-med-and-down
+                        a.sidenav-trigger.show-on-large(href='#cart')
+                            i.fal.fa-shopping-cart                                
+
+                    li
+                        a.sidenav-trigger(href='#sidenav')
+                            i.material-icons menu
+                ul.top.hide-on-small-and-down
+                    unless user
+                        li
+                            a.right.white-text(href='/login' method="GET") Login
+                        li
+                            a.right.white-text(href='/signup') Signup
+                    else
+                        li
+                            a.right.white-text(href='/logout') Logout
+    #sidenav.sidenav.transparent
+        ul
+            li
+                a.white-text(href='#') Accessories
+            li
+                a.white-text(href='#') #Trends
+            li
+                a.sidenav-trigger.white-text(href='#cart')
+                    i.fal.fa-shopping-cart.white-text.fscrtsd
+            unless user
+                li
+                    a.hide-on-med-and-up.white-text(href='/login') Login
+                li
+                    a.hide-on-med-and-up.white-text(href='/signup') Signup
+            else
+                li
+                    a.hide-on-med-and-up.white-text(href='/logout') Logout
+
+    // -The cart sidenav
+    #cart.sidenav.container(style='overflow: scroll;')
+        .container(style='margin-bottom: 50px;')
+            h1.center.footer-h1(style="font-weight:bolder") My cart
+            ul.container#cart-cont(style='margin-top: 70px;')
+
+
+        .cart-footer.row(style='width: 100%; margin-top: 30px;')
+            p.items-count.center ITEMS: 0
+            p.center.total TOTAL: $0:00
+            a.chck-out.btn.center.transparent.col.s6.l4.offset-l4.offset-s3(style='border: 1px solid green;' href='#') Checkout
+            a.clr-crt.btn.center.transparent.col.s6.l4.offset-l4.offset-s3(style='border: 1px solid rgba(250, 23, 23,0.5); margin-top:30px' href='#') Clear Cart
+
