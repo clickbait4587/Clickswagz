@@ -13,7 +13,6 @@ db.once('open', ()=>{
 console.log('Mongo Connected')
 
 /* GET home page. */
-var store = require('store')
 var songs =  require('../controllers/songs')
 const ax = axios.get("https://fakestoreapi.com/products")
 Products.find({},(err, prods)=>{
