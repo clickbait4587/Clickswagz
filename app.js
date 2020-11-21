@@ -61,7 +61,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-app.use("/signup", require("./Routes/user"));
+app.use("/signup", require("./routes/user"));
 app.get('/login', (req,res)=>{
   res.render('login')
 })
